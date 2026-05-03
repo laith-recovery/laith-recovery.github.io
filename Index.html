@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة الليث لخدمات ريكفري وسحب السيارات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 32px;
+            color: #e94560;
+        }
+
+        .logo-text h1 {
+            font-size: 24px;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .logo-text span {
+            font-size: 12px;
+            color: #ccc;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            color: #e94560;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 26, 46, 0.85), rgba(22, 33, 62, 0.9)), 
+                        url('https://kimi-web-img.moonshot.cn/img/img.freepik.com/9d7274f558443d104f9bf8331729227eb1f3611d.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 70px;
+        }
+
+        .hero-content h2 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            color: #ddd;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-call {
+            background: #e94560;
+            color: white;
+            box-shadow: 0 4px 15px rgba(233, 69, 96, 0.4);
+        }
+
+        .btn-call:hover {
+            background: #c73e54;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(233, 69, 96, 0.6);
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-whatsapp:hover {
+            background: #1da851;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h3 {
+            font-size: 36px;
+            color: #1a1a2e;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 18px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-bottom: 4px solid #e94560;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .feature-card i {
+            font-size: 48px;
+            color: #e94560;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h4 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #1a1a2e;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Services Section */
+        .services {
+            background: #1a1a2e;
+            color: white;
+            padding: 80px 20px;
+        }
+
+        .services-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services .section-title h3,
+        .services .section-title p {
+            color: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-item {
+            background: rgba(255,255,255,0.05);
+            padding: 35px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s;
+        }
+
+        .service-item:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: #e94560;
+        }
+
+        .service-item i {
+            font-size: 40px;
+            color: #e94560;
+            margin-bottom: 20px;
+        }
+
+        .service-item h4 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .service-item p {
+            color: #ccc;
+            font-size: 16px;
+        }
+
+        /* Contact Bar */
+        .contact-bar {
+            background: #e94560;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .contact-bar h3 {
+            color: white;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            background: white;
+            color: #1a1a2e;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: #0f0f1a;
+            color: #aaa;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 16px;
+        }
+
+        .footer .social-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .footer .social-links a {
+            color: #aaa;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .footer .social-links a:hover {
+            color: #e94560;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                right: 0;
+                background: #1a1a2e;
+                width: 100%;
+                flex-direction: column;
+                padding: 20px;
+                gap: 15px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-content h2 {
+                font-size: 32px;
+            }
+
+            .hero-content p {
+                font-size: 18px;
+            }
+
+            .btn {
+                padding: 12px 30px;
+                font-size: 16px;
+            }
+        }
+
+        /* Floating Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 999;
+        }
+
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .float-call {
+            background: #e94560;
+        }
+
+        .float-whatsapp {
+            background: #25d366;
+        }
+
+        @media (max-width: 768px) {
+            .floating-buttons {
+                bottom: 20px;
+                left: 20px;
+            }
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-truck-pickup"></i>
+                <div class="logo-text">
+                    <h1>شركة الليث</h1>
+                    <span>خدمات ريكفري وسحب السيارات</span>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#features">مميزاتنا</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>خدمات ريكفري وسحب السيارات 24/7</h2>
+            <p>نصلك أينما كنت بأسرع وقت ممكن - خدمة احترافية على مدار الساعة</p>
+            <div class="hero-buttons">
+                <a href="tel:+966500000000" class="btn btn-call">
+                    <i class="fas fa-phone"></i>
+                    اتصل الآن
+                </a>
+                <a href="https://wa.me/971567593929" class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    واتساب
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-title">
+            <h3>لماذا تختارنا؟</h3>
+            <p>نقدم لكم أفضل خدمات ريكفري السيارات بمعايير عالمية</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-clock"></i>
+                <h4>خدمة 24 ساعة</h4>
+                <p>نحن متواجدون على مدار الساعة طوال أيام الأسبوع لمساعدتك في أي وقت</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-bolt"></i>
+                <h4>استجابة سريعة</h4>
+                <p>فريقنا يصل إليك في أقل من 30 دقيقة من لحظة اتصالك</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h4>أمان تام</h4>
+                <p>نضمن سلامة سيارتك أثناء النقل بأحدث المعدات والتقنيات</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-dollar-sign"></i>
+                <h4>أسعار تنافسية</h4>
+                <p>أفضل الأسعار في السوق مع ضمان الجودة والاحترافية</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="services-content">
+            <div class="section-title">
+                <h3>خدماتنا</h3>
+                <p>نقدم مجموعة متكاملة من خدمات ريكفري وصيانة السيارات</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <i class="fas fa-truck-loading"></i>
+                    <h4>سحب السيارات</h4>
+                    <p>خدمة سحب احترافية لجميع أنواع السيارات باستخدام أحدث الونشات والمعدات</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-car-crash"></i>
+                    <h4>ريكفري الطوارئ</h4>
+                    <p>خدمة طوارئ سريعة للسيارات المعطلة على الطريق في أي مكان</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-gas-pump"></i>
+                    <h4>تزويد الوقود</h4>
+                    <p>خدمة توصيل الوقود للسيارات التي نفد وقودها أثناء السفر</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-car-battery"></i>
+                    <h4>شحن البطاريات</h4>
+                    <p>خدمة شحن واستبدال البطاريات في الموقع بأحدث الأجهزة</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-tools"></i>
+                    <h4>إصلاحات طارئة</h4>
+                    <p>إصلاح الأعطال البسيطة في الموقع لتجنب نقل السيارة</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-truck-moving"></i>
+                    <h4>نقل السيارات</h4>
+                    <p>نقل السيارات بين المدن بأمان تام وبأسعار منافسة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Bar -->
+    <section class="contact-bar" id="contact">
+        <h3>هل تحتاج مساعدة؟ اتصل بنا الآن!</h3>
+        <div class="contact-buttons">
+            <a href="tel:+971567593929" class="contact-btn">
+                <i class="fas fa-phone"></i>
+                050 000 0000
+            </a>
+            <a href="https://wa.me/966500000000" class="contact-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                واتساب
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p> جميع الحقوق محفوظة © 2026 شركة الليث خدمات سحب ونقل المركبات</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="tel:+971567593929" class="floating-btn float-call" title="اتصل الآن">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/971567593929" class="floating-btn float-whatsapp" target="_blank" title="واتساب">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
